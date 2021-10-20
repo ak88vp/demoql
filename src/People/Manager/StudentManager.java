@@ -1,4 +1,7 @@
-package People;
+package People.Manager;
+
+import People.Interface.Management;
+import People.Model.Student;
 
 import java.util.ArrayList;
 
@@ -63,21 +66,21 @@ public class StudentManager implements Management<Student> {
         listStudent.remove(find(id));
     }
 
-    @Override
-    public void sort() {
-        listStudent.sort((a, b) -> (int) (a.getMediumScore() - b.getMediumScore()));
-    }
-
-    @Override
-    public int total() {
-        int total = 0;
-        for (Student student : listStudent) {
-            total += student.getMediumScore();
-
-        }
-        System.out.println(" tổng điểm của các học sinh trong danh sách là : "+total+ " điểm ");
-        return total;
-    }
+//    @Override
+//    public void sort() {
+//        listStudent.sort((a, b) -> (int) (a.getMediumScore() - b.getMediumScore()));
+//    }
+//
+//    @Override
+//    public int total() {
+//        int total = 0;
+//        for (Student student : listStudent) {
+//            total += student.getMediumScore();
+//
+//        }
+//        System.out.println(" tổng điểm của các học sinh trong danh sách là : "+total+ " điểm ");
+//        return total;
+//    }
 
     @Override
     public void edit(int id, Student student) {

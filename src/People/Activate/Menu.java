@@ -1,4 +1,7 @@
-package People;
+package People.Activate;
+
+import People.Model.Student;
+import People.Manager.StudentManager;
 
 import java.util.Scanner;
 
@@ -24,8 +27,6 @@ public class Menu {
                         System.out.println("Nhập tên học sinh : ");
                         scanner.nextLine();
                         String name = scanner.nextLine();
-//                        System.out.println("Nhập id cho học sinh : ");
-//                        int id = scanner.nextInt();
                         System.out.println("Nhập tuổi của học sinh :");
                         int age = scanner.nextInt();
                         System.out.println("Nhập số điểm trung bình của học sinh :");
@@ -44,8 +45,6 @@ public class Menu {
                             System.out.println("Nhập tên học sinh : ");
                             scanner.nextLine();
                             String setName = scanner.nextLine();
-//                            System.out.println("Nhập id cho học sinh : ");
-//                            int setId = scanner.nextInt();
                             System.out.println("Nhập số tuổi của học sinh :");
                             int setAge = scanner.nextInt();
                             System.out.println("Nhập số điểm trung bình của học sinh :");
@@ -61,14 +60,14 @@ public class Menu {
                         int idWantToFind = scanner.nextInt();
                         studentManager.find(idWantToFind);
                         break;
-                    case 5:
-                        studentManager.sort();
-                        break;
+//                    case 5:
+//                        studentManager.sort();
+//                        break;
                     case 6:
                         studentManager.print();
                         break;
-                    case 7 :
-                        studentManager.total();
+//                    case 7 :
+//                        studentManager.total();
                 }
 
             } else if (selection < 0 || selection > 7) {

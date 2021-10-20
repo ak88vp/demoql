@@ -1,4 +1,4 @@
-package People;
+package People.Model;
 
 public class People {
     private int id;
