@@ -6,6 +6,11 @@ public class Student extends People {
     public Student() {
     }
 
+    public Student(String name, int age, double mediumScore) {
+        super(name, age);
+        this.mediumScore = mediumScore;
+    }
+
     public Student(int medium_score) {
         this.mediumScore = medium_score;
     }

@@ -5,6 +5,11 @@ public class People {
     private String name;
     private int age;
 
+    public People(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
     public People(int id, String name, int age) {
         this.id = id;
         this.name = name;
@@ -25,17 +30,8 @@ public class People {
     public String getName() {
         return name;
     }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public int getAge() {
         return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
     }
 
     @Override

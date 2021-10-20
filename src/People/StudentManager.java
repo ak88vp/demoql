@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class StudentManager implements Management<Student> {
     ArrayList<Student> listStudent;
-//    int size = 0;
+    int idFirst = 0;
 
     public StudentManager(ArrayList<Student> listStudent) {
         this.listStudent = listStudent;
@@ -24,6 +24,8 @@ public class StudentManager implements Management<Student> {
 
     @Override
     public void add(Student student) {
+        idFirst++;
+        student.setId(idFirst);
         listStudent.add(student);
     }
 
@@ -47,7 +49,10 @@ public class StudentManager implements Management<Student> {
                 return index;
 
             }
-            System.out.println("---------end------------");
+
+                System.out.println("---------end------------");
+
+
         }
         System.out.println("ko tìm thấy học viên này ");
         return index;
@@ -76,6 +81,8 @@ public class StudentManager implements Management<Student> {
 
     @Override
     public void edit(int id, Student student) {
+        idFirst++;
+        student.setId(idFirst);
         listStudent.set(find(id), student);
     }
 }

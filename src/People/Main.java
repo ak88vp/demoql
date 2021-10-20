@@ -3,9 +3,9 @@ package People;
 public class Main {
     public static void main(String[] args) {
         StudentManager peopleManager =new StudentManager();
-        peopleManager.add(new Student(1,"ak88",16,8));
-        peopleManager.add(new Student(2,"ak86",22,6));
-        peopleManager.add(new Student(3,"ak87",24,10));
+        peopleManager.add(new Student("ak88",16,8));
+        peopleManager.add(new Student("ak86",22,6));
+        peopleManager.add(new Student("ak87",24,10));
         peopleManager.print();
 //        peopleManager.find(5);
 //        peopleManager.delete(3);

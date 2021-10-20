@@ -24,13 +24,13 @@ public class Menu {
                         System.out.println("Nhập tên học sinh : ");
                         scanner.nextLine();
                         String name = scanner.nextLine();
-                        System.out.println("Nhập id cho học sinh : ");
-                        int id = scanner.nextInt();
+//                        System.out.println("Nhập id cho học sinh : ");
+//                        int id = scanner.nextInt();
                         System.out.println("Nhập tuổi của học sinh :");
                         int age = scanner.nextInt();
                         System.out.println("Nhập số điểm trung bình của học sinh :");
                         int mediumScore = scanner.nextInt();
-                        studentManager.add(new Student(id, name, age,mediumScore));
+                        studentManager.add(new Student( name, age,mediumScore));
                         break;
                     case 2:
                         System.out.println("Nhập vào id học sinh mà bạn muốn xóa : ");
@@ -44,13 +44,13 @@ public class Menu {
                             System.out.println("Nhập tên học sinh : ");
                             scanner.nextLine();
                             String setName = scanner.nextLine();
-                            System.out.println("Nhập id cho học sinh : ");
-                            int setId = scanner.nextInt();
+//                            System.out.println("Nhập id cho học sinh : ");
+//                            int setId = scanner.nextInt();
                             System.out.println("Nhập số tuổi của học sinh :");
                             int setAge = scanner.nextInt();
                             System.out.println("Nhập số điểm trung bình của học sinh :");
                             int setMediumScore = scanner.nextInt();
-                            Student newStudent = new Student(setId, setName, setAge,setMediumScore);
+                            Student newStudent = new Student( setName, setAge,setMediumScore);
                             studentManager.edit(idWantToFix, newStudent);
                         }
                         break;
