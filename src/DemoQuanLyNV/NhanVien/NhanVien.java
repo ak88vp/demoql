@@ -1,6 +1,8 @@
 package DemoQuanLyNV.NhanVien;
 
-public class NhanVien extends Nguoi {
+import DemoQuanLyNV.QuanLy.quanLy;
+
+public  class NhanVien extends Nguoi implements Comparable<NhanVien>{
     private int money;
     private int id;
 
@@ -38,11 +40,18 @@ public class NhanVien extends Nguoi {
         this.id = id;
     }
 
+
     @Override
     public String toString() {
         return "NhanVien{" +
                 " money =" + money +
                 ", id= " + id +" name :" +getName()+" age : "+getAge()+
                 '}';
+    }
+
+
+    @Override
+    public int compareTo(NhanVien o) {
+        return money-o.getMoney();
     }
 }
