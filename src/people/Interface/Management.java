@@ -1,4 +1,4 @@
-package People.Interface;
+package people.Interface;
 
 public interface Management<T> {
     void add(T t);

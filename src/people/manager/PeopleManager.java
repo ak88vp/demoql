@@ -1,22 +1,27 @@
-package People.Manager;
+package people.manager;
 
-import People.Interface.Management;
-import People.Model.People;
+import people.Interface.Management;
+import people.model.People;
 
 import java.util.ArrayList;
 
 public class PeopleManager implements Management<People> {
     ArrayList <People> peopleArrayList;
-    int idFirst = 0;
+    private   int idFirst = 0;
 
-    public PeopleManager(ArrayList<People> peopleArrayList) {
-        this.peopleArrayList = peopleArrayList;
-    }
+
 
     public PeopleManager() {
         peopleArrayList=new ArrayList<>();
     }
 
+    public ArrayList<People> getPeopleArrayList() {
+        return peopleArrayList;
+    }
+
+    public int getIdFirst() {
+        return idFirst;
+    }
     @Override
     public void add(People people) {
         idFirst++;
@@ -40,14 +45,12 @@ public class PeopleManager implements Management<People> {
             if (peopleArrayList.get(i).getId() == id) {
                 index = i;
                 System.out.println("Đã tìm thấy người mà bạn cần .");
-                System.out.println(" Người có thông tin là : " + peopleArrayList.get(index));
+                System.out.println("Người đó có thông tin là : " + peopleArrayList.get(index));
                 return index;
-
             }
-
-            System.out.println("---------end------------");
-
-
+        }
+        if(index!=-1){
+            System.out.println("------------end------------");
         }
         System.out.println("Ko tìm thấy người này ");
         return index;
@@ -55,13 +58,12 @@ public class PeopleManager implements Management<People> {
 
     @Override
     public void delete(int id) {
+        idFirst--;
         peopleArrayList.remove(find(id));
     }
 
     @Override
     public void edit(int id, People people) {
-        idFirst++;
-        people.setId(idFirst);
         peopleArrayList.set(find(id), people);
     }
 

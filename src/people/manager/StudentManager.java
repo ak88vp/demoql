@@ -1,13 +1,11 @@
-package People.Manager;
+package people.manager;
 
-import People.Interface.Management;
-import People.Model.Student;
+import people.model.Student;
 
 import java.util.ArrayList;
 
-public class StudentManager implements Management<Student> {
+public class StudentManager extends PeopleManager {
     ArrayList<Student> listStudent;
-    int idFirst = 0;
 
     public StudentManager(ArrayList<Student> listStudent) {
         this.listStudent = listStudent;
@@ -25,10 +23,7 @@ public class StudentManager implements Management<Student> {
         listStudent = new ArrayList<>();
     }
 
-    @Override
     public void add(Student student) {
-        idFirst++;
-        student.setId(idFirst);
         listStudent.add(student);
     }
 
@@ -53,7 +48,7 @@ public class StudentManager implements Management<Student> {
 
             }
 
-                System.out.println("---------end------------");
+            System.out.println("---------end------------");
 
 
         }
@@ -66,26 +61,20 @@ public class StudentManager implements Management<Student> {
         listStudent.remove(find(id));
     }
 
-//    @Override
-//    public void sort() {
-//        listStudent.sort((a, b) -> (int) (a.getMediumScore() - b.getMediumScore()));
-//    }
-//
-//    @Override
-//    public int total() {
-//        int total = 0;
-//        for (Student student : listStudent) {
-//            total += student.getMediumScore();
-//
-//        }
-//        System.out.println(" tổng điểm của các học sinh trong danh sách là : "+total+ " điểm ");
-//        return total;
-//    }
+    public void sort() {
+        listStudent.sort((a, b) -> (int) (a.getMediumScore() - b.getMediumScore()));
+    }
 
-    @Override
+
+    public void total() {
+        int total = 0;
+        for (Student student : listStudent) {
+            total += student.getMediumScore();
+        }
+        System.out.println(" tổng điểm của các học sinh trong danh sách là : " + total + " điểm ");
+    }
+
     public void edit(int id, Student student) {
-        idFirst++;
-        student.setId(idFirst);
         listStudent.set(find(id), student);
     }
 }

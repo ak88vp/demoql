@@ -1,4 +1,4 @@
-package People.Model;
+package people.model;
 
 public class Student extends People {
     private double mediumScore;
@@ -32,11 +32,6 @@ public class Student extends People {
         if (this.mediumScore > student.mediumScore) return 1;
         else if (this.mediumScore < student.mediumScore) return -1;
         return 1;
-    }
-    public int total(){
-        int total=0;
-
-        return total;
     }
 
     @Override
