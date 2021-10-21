@@ -6,13 +6,12 @@ import people.model.People;
 import java.util.ArrayList;
 
 public class PeopleManager implements Management<People> {
-    ArrayList <People> peopleArrayList;
-    private   int idFirst = 0;
-
+    ArrayList<People> peopleArrayList;
+    private int idFirst = 0;
 
 
     public PeopleManager() {
-        peopleArrayList=new ArrayList<>();
+        peopleArrayList = new ArrayList<>();
     }
 
     public ArrayList<People> getPeopleArrayList() {
@@ -22,6 +21,7 @@ public class PeopleManager implements Management<People> {
     public int getIdFirst() {
         return idFirst;
     }
+
     @Override
     public void add(People people) {
         idFirst++;
@@ -49,7 +49,7 @@ public class PeopleManager implements Management<People> {
                 return index;
             }
         }
-        if(index!=-1){
+        if (index != -1) {
             System.out.println("------------end------------");
         }
         System.out.println("Ko tìm thấy người này ");

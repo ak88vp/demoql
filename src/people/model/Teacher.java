@@ -1,14 +1,10 @@
 package people.model;
 
-public class Teacher  extends People{
+public class Teacher extends People {
     private String subject;
 
     public Teacher(String name, int age, String subject) {
         super(name, age);
-        this.subject = subject;
-    }
-
-    public Teacher(String subject) {
         this.subject = subject;
     }
 
