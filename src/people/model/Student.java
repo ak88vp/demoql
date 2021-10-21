@@ -37,8 +37,8 @@ public class Student extends People {
     @Override
     public String toString() {
         return "Student{" +
-                "id=" + super.getId() + ", name='" + super.getName() + ", age=" + super.getAge() +
-                ", medium_score=" + mediumScore +
+                " id= " + super.getId() + ", name= " + super.getName() + ", age = " + super.getAge() +
+                ", medium_score = " + mediumScore +
                 '}';
     }
 }

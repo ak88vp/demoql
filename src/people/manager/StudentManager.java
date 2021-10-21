@@ -6,17 +6,24 @@ import java.util.ArrayList;
 
 public class StudentManager extends PeopleManager {
     ArrayList<Student> listStudent;
+    private int size = 0;
+    public ArrayList<Student> getListStudent() {
+        return listStudent;
+    }
 
     public StudentManager(ArrayList<Student> listStudent) {
         this.listStudent = listStudent;
     }
 
-    public ArrayList<Student> getListStudent() {
-        return listStudent;
+    public void setSize(int size) {
+        this.size = size;
     }
 
     public void setListStudent(ArrayList<Student> listStudent) {
         this.listStudent = listStudent;
+    }
+    public int getSize() {
+        return size;
     }
 
     public StudentManager() {
@@ -24,6 +31,7 @@ public class StudentManager extends PeopleManager {
     }
 
     public void add(Student student) {
+        size++;
         listStudent.add(student);
     }
 
@@ -33,7 +41,6 @@ public class StudentManager extends PeopleManager {
             System.out.println(student);
 
         }
-        System.out.println("---------end------------");
     }
 
     @Override
@@ -42,22 +49,20 @@ public class StudentManager extends PeopleManager {
         for (int i = 0; i < listStudent.size(); i++) {
             if (listStudent.get(i).getId() == id) {
                 index = i;
-                System.out.println("đã tìm thấy học viên mà bạn cần .");
-                System.out.println(" học viên có thông tin là : " + listStudent.get(index));
+                System.out.println("Đã tìm thấy học viên mà bạn cần .");
+                System.out.println("Học viên có thông tin là : " + listStudent.get(index));
                 return index;
 
             }
-
             System.out.println("---------end------------");
-
-
         }
-        System.out.println("ko tìm thấy học viên này ");
+        System.out.println("Ko tìm thấy học viên này ");
         return index;
     }
 
     @Override
     public void delete(int id) {
+        size--;
         listStudent.remove(find(id));
     }
 
@@ -71,10 +76,8 @@ public class StudentManager extends PeopleManager {
         for (Student student : listStudent) {
             total += student.getMediumScore();
         }
-        System.out.println(" tổng điểm của các học sinh trong danh sách là : " + total + " điểm ");
+        System.out.println(" Tổng điểm của các học sinh trong danh sách là : " + total + " điểm ");
     }
 
-    public void edit(int id, Student student) {
-        listStudent.set(find(id), student);
-    }
+
 }

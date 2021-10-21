@@ -9,7 +9,6 @@ public class PeopleManager implements Management<People> {
     ArrayList<People> peopleArrayList;
     private int idFirst = 0;
 
-
     public PeopleManager() {
         peopleArrayList = new ArrayList<>();
     }

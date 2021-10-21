@@ -22,10 +22,10 @@ public class Teacher extends People {
     @Override
     public String toString() {
         return "Teacher{" +
-                "id=" + super.getId() +
-                ", name='" + super.getName() + '\'' +
-                ", age=" + super.getAge() +
-                ", subject='" + subject + '\'' +
+                " id = " + super.getId() +
+                ", name = '" + super.getName() + '\'' +
+                ", age = " + super.getAge() +
+                ", subject = '" + subject + '\'' +
                 '}';
 
     }
